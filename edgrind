@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# -ea enables assertions recognizing `assert' as a keyword
+java -jar ./jars/edgrind.jar

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ROOT=~/prg/java/edgrind
+
+rm -rf ${ROOT}/*~ \
+       ${ROOT}/dat/*~ \
+       ${ROOT}/src/edgrind/*~ \
+       ${ROOT}/src/edgrind/geom/*~ \
+       ${ROOT}/src/edgrind/sketch/*~ \
+       ${ROOT}/src/edgrind/expert/*~ \
+       ${ROOT}/src/edgrind/error/*~ \
+       ${ROOT}/classes/* \
+       ${ROOT}/jars/edgrind.jar \
+       ${ROOT}/doc \
+       ${ROOT}/dist

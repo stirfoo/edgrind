@@ -1,0 +1,211 @@
+{
+    "bigr1a1": {
+        "system?": false,
+        "specs": {
+            "d1": 6,
+            "l1": 2,
+            "l2": 1.5,
+            "r1": 0.9
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1A1",
+        "name": "bigr1a1"
+    },
+    "my 11V9 3.75od": {
+        "system?": false,
+        "specs": {
+            "l1": 1.518,
+            "l2": 0.4,
+            "l3": 0.14,
+            "l4": 0.3937,
+            "d1": 3.77,
+            "d2": 3.77,
+            "d3": 2.39
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_11V9",
+        "name": "my 11V9 3.75od"
+    },
+    "my 1v1": {
+        "system?": false,
+        "specs": {
+            "a1": 45,
+            "d1": 6,
+            "l1": 0.375,
+            "l2": 0.5,
+            "r1": 0.1
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1V1",
+        "name": "my 1v1"
+    },
+    "my 11v5 3.id": {
+        "system?": false,
+        "specs": {
+            "a1": 25,
+            "a2": 15,
+            "l1": 1.375,
+            "l2": 1.375,
+            "l3": 0.194,
+            "l4": 0.394,
+            "d1": 3.5,
+            "d2": 3,
+            "d3": 2.38
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_11V5",
+        "name": "my 11v5 3.id"
+    },
+    "#11V9_3.75D": {
+        "system?": true,
+        "specs": {
+            "l1": 1.518,
+            "l2": 0.4,
+            "l3": 0.14,
+            "l4": 0.3937,
+            "d1": 3.77,
+            "d2": 3.77,
+            "d3": 2.39
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_11V9",
+        "name": "#11V9_3.75D"
+    },
+    "#1F1": {
+        "system?": true,
+        "specs": {
+            "d1": 6,
+            "l1": 0.3,
+            "r1": 0.25
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1F1",
+        "name": "#1F1"
+    },
+    "1v1 gash": {
+        "system?": false,
+        "specs": {
+            "a1": 45,
+            "d1": 5.5,
+            "l1": 0.375,
+            "l2": 0.5,
+            "r1": 0.005
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1V1",
+        "name": "1v1 gash"
+    },
+    "#1A1": {
+        "system?": true,
+        "specs": {
+            "d1": 6,
+            "l1": 0.5,
+            "l2": 0.25,
+            "r1": 0.001
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1A1",
+        "name": "#1A1"
+    },
+    "1A1 CBN": {
+        "system?": false,
+        "specs": {
+            "d1": 4.932,
+            "l1": 0.495,
+            "l2": 0.25,
+            "r1": 0.001
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1A1",
+        "name": "1A1 CBN"
+    },
+    "#11V5_3.0ID": {
+        "system?": true,
+        "specs": {
+            "a1": 25,
+            "a2": 15,
+            "l1": 1.375,
+            "l2": 1.375,
+            "l3": 0.194,
+            "l4": 0.394,
+            "d1": 3.5,
+            "d2": 3,
+            "d3": 2.38
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_11V5",
+        "name": "#11V5_3.0ID"
+    },
+    "my 1f1": {
+        "system?": false,
+        "specs": {
+            "d1": 6,
+            "l1": 0.3,
+            "r1": 0.25
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1F1",
+        "name": "my 1f1"
+    },
+    "1a1 spindown": {
+        "system?": false,
+        "specs": {
+            "d1": 4.312,
+            "l1": 0.5,
+            "l2": 0.25,
+            "r1": 0.005
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1A1",
+        "name": "1a1 spindown"
+    },
+    "my 1a1 cmf": {
+        "system?": false,
+        "specs": {
+            "d1": 4.405,
+            "l1": 0.5,
+            "l2": 0.25,
+            "l3": 0.276
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1A1_CMF",
+        "name": "my 1a1 cmf"
+    },
+    "my 1a1": {
+        "system?": false,
+        "specs": {
+            "d1": 5,
+            "l1": 0.5,
+            "l2": 0.25,
+            "r1": 0.003
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1A1",
+        "name": "my 1a1"
+    },
+    "#1V1": {
+        "system?": true,
+        "specs": {
+            "a1": 15,
+            "d1": 6,
+            "l1": 0.5,
+            "l2": 0.5,
+            "r1": 0.005
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1V1",
+        "name": "#1V1"
+    },
+    "#1A1 CMF": {
+        "system?": true,
+        "specs": {
+            "d1": 4,
+            "l1": 0.5,
+            "l2": 0.25,
+            "l3": 0.331
+        },
+        "edgrind-type": "WHEEL",
+        "wheel-type": "W_1A1_CMF",
+        "name": "#1A1 CMF"
+    }
+}

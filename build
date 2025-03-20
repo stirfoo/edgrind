@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Compile all .java files in ./src sub-directories. The .class files will be
+# written to ./classes. If the compile is successful, the archive
+# edgrind.jar will be created in ./jars.
+# 
+# Not the prettiest build system ever but it works! ROOT exists so this thing
+# will work with the makefiles in the ./src sub-directories.
+
+ROOT=~/prg/java/edgrind
+
+# Find all project .java files and write their full pathnames to sources.lst
+# (see find ~+ syntax)
+find ${ROOT}/src -type f -name "*.java" > ${ROOT}/sources.lst &&
+
+# compile using the just-created sources.list
+javac -Xlint:all \
+      -cp ${ROOT}/jars/json-java.jar \
+      -d ${ROOT}/classes \
+      @${ROOT}/sources.lst &&
+
+# archive
+jar cfm ${ROOT}/jars/edgrind.jar ${ROOT}/manifest.txt \
+    -C ${ROOT}/classes .

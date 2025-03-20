@@ -1,0 +1,254 @@
+{
+    "Nann 3718E 1.0": {
+        "specs": {
+            "d1": 1.7716,
+            "l1": 0.16,
+            "d2": 1
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3718E 1.0",
+        "chucks": [
+            "SK50 7050",
+            "SK50 7060"
+        ]
+    },
+    "Nann 3148E 3/16": {
+        "specs": {
+            "d1": 0.70866,
+            "l1": 0.1,
+            "d2": 0.1875
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3148E 3/16",
+        "chucks": ["SK50 7010"]
+    },
+    "Nann 3148E 4mm": {
+        "specs": {
+            "d1": 0.70866,
+            "l1": 0.1,
+            "d2": 0.15748031496062992
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3148E 4mm",
+        "chucks": ["SK50 7010"]
+    },
+    "Nann 3409E 3/8": {
+        "specs": {
+            "d1": 1.10236,
+            "l1": 0.13,
+            "d2": 0.375
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3409E 3/8",
+        "chucks": [
+            "SK50 7030",
+            "SK50 7040"
+        ]
+    },
+    "Nann 3148E 5/16": {
+        "specs": {
+            "d1": 0.70866,
+            "l1": 0.1,
+            "d2": 0.3125
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3148E 5/16",
+        "chucks": ["SK50 7010"]
+    },
+    "Nann 3718E-V 3/4 Short": {
+        "specs": {
+            "d1": 1.7716,
+            "l1": 0.1,
+            "d2": 0.75,
+            "l2": 0.58
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3718E-V 3/4 Short",
+        "chucks": [
+            "SK50 7050",
+            "SK50 7060"
+        ]
+    },
+    "Nann 3718E-V 20mm": {
+        "specs": {
+            "d1": 1.7716,
+            "l1": 0.1,
+            "d2": 0.7874015748031497,
+            "l2": 0.64
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3718E-V 20mm",
+        "chucks": [
+            "SK50 7050",
+            "SK50 7060"
+        ]
+    },
+    "Nann 3148E 1/4": {
+        "specs": {
+            "d1": 0.70866,
+            "l1": 0.1,
+            "d2": 0.25
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3148E 1/4",
+        "chucks": ["SK50 7010"]
+    },
+    "Nann 3409E 5/8": {
+        "specs": {
+            "d1": 1.10236,
+            "l1": 0.12,
+            "d2": 0.625
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3409E 5/8",
+        "chucks": [
+            "SK50 7030",
+            "SK50 7040"
+        ]
+    },
+    "Nann 3409E 1/2": {
+        "specs": {
+            "d1": 1.10236,
+            "l1": 0.12,
+            "d2": 0.5
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3409E 1/2",
+        "chucks": [
+            "SK50 7030",
+            "SK50 7040"
+        ]
+    },
+    "Nann 3409E 10mm": {
+        "specs": {
+            "d1": 1.10236,
+            "l1": 0.1,
+            "d2": 0.3937007874015748
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3409E 10mm",
+        "chucks": [
+            "SK50 7030",
+            "SK50 7040"
+        ]
+    },
+    "Nann 3409E-V 3/8": {
+        "specs": {
+            "d1": 1.10236,
+            "l1": 0.1,
+            "d2": 0.375,
+            "l2": 0.65
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3409E-V 3/8",
+        "chucks": [
+            "SK50 7030",
+            "SK50 7040"
+        ]
+    },
+    "Nann 3148E-V 5/16": {
+        "specs": {
+            "d1": 0.70866,
+            "l1": 0.1,
+            "d2": 0.3125,
+            "l2": 0.29
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3148E-V 5/16",
+        "chucks": ["SK50 7010"]
+    },
+    "Nann 3409E 16mm": {
+        "specs": {
+            "d1": 1.10236,
+            "l1": 0.12,
+            "d2": 0.47244
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3409E 16mm",
+        "chucks": [
+            "SK50 7030",
+            "SK50 7040"
+        ]
+    },
+    "Nann 3718E-V 1.0": {
+        "specs": {
+            "d1": 1.7716,
+            "l1": 0.1,
+            "d2": 1,
+            "l2": 0.66
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3718E-V 1.0",
+        "chucks": [
+            "SK50 7050",
+            "SK50 7060"
+        ]
+    },
+    "Nann 3409E-V 1/2": {
+        "specs": {
+            "d1": 1.10236,
+            "l1": 0.1,
+            "d2": 0.5,
+            "l2": 0.5
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3409E-V 1/2",
+        "chucks": [
+            "SK50 7030",
+            "SK50 7040"
+        ]
+    },
+    "Nann 3718E-V 3/4": {
+        "specs": {
+            "d1": 1.7716,
+            "l1": 0.1,
+            "d2": 0.75,
+            "l2": 0.81
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3718E-V 3/4",
+        "chucks": [
+            "SK50 7050",
+            "SK50 7060"
+        ]
+    },
+    "Nann 3148E 3/8": {
+        "specs": {
+            "d1": 0.70866,
+            "l1": 0.1,
+            "d2": 0.375
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3148E 3/8",
+        "chucks": ["SK50 7010"]
+    },
+    "Nann 3148E 1/8": {
+        "specs": {
+            "d1": 0.70866,
+            "l1": 0.1,
+            "d2": 0.125
+        },
+        "edgrind-type": "COLLET",
+        "collet-type": "NANN_PULLBACK",
+        "name": "Nann 3148E 1/8",
+        "chucks": ["SK50 7010"]
+    }
+}

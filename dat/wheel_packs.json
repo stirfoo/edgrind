@@ -1,0 +1,80 @@
+{
+    "wheelpack 1": {
+        "edgrind-type": "WHEEL_PACK",
+        "wheel-1-specs": {
+            "flip?": false,
+            "wheel-db-name": "my 11V9 3.75od",
+            "front?": true,
+            "z-length": 6.25
+        },
+        "wheel-3-specs": {
+            "flip?": true,
+            "wheel-db-name": "#1A1",
+            "front?": false,
+            "z-length": 3
+        },
+        "wheel-adapter-db-name": "85mm",
+        "db-name": "wheelpack 1",
+        "spindle": 1,
+        "wheel-2-specs": {
+            "flip?": false,
+            "wheel-db-name": "#1V1",
+            "front?": false,
+            "z-length": 4
+        }
+    },
+    "spindown 1": {
+        "edgrind-type": "WHEEL_PACK",
+        "wheel-1-specs": {
+            "flip?": false,
+            "wheel-db-name": "1a1 spindown",
+            "front?": true,
+            "z-length": 4.1
+        },
+        "wheel-adapter-db-name": "60mm",
+        "db-name": "spindown 1",
+        "spindle": 1
+    },
+    "flip test": {
+        "edgrind-type": "WHEEL_PACK",
+        "wheel-adapter-db-name": "40mm",
+        "db-name": "flip test",
+        "spindle": 2,
+        "wheel-2-specs": {
+            "flip?": true,
+            "wheel-db-name": "my 1v1",
+            "front?": true,
+            "z-length": 3
+        }
+    },
+    "foopack 1": {
+        "edgrind-type": "WHEEL_PACK",
+        "wheel-1-specs": {
+            "flip?": false,
+            "wheel-db-name": "my 1f1",
+            "front?": false,
+            "z-length": 2.2
+        },
+        "wheel-3-specs": {
+            "flip?": false,
+            "wheel-db-name": "my 1f1",
+            "front?": false,
+            "z-length": 3
+        },
+        "wheel-adapter-db-name": "40mm",
+        "db-name": "foopack 1",
+        "spindle": 2
+    },
+    "weldon flats": {
+        "edgrind-type": "WHEEL_PACK",
+        "wheel-1-specs": {
+            "flip?": false,
+            "wheel-db-name": "my 1a1 cmf",
+            "front?": true,
+            "z-length": 4.168
+        },
+        "wheel-adapter-db-name": "60mm",
+        "db-name": "weldon flats",
+        "spindle": 1
+    }
+}

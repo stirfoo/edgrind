@@ -1,0 +1,16 @@
+{
+    "background-color": "2d3561",
+    "collet-fill-color": "999999",
+    "chuck-fill-color": "999999",
+    "dim-line-color": "ffff00",
+    "wheel-fill-color": "999999",
+    "dim-arrow-color": "00ff00",
+    "wheel-adapter-fill-color": "999999",
+    "sketch-fill-color": "999999",
+    "sketch-line-color": "ffffff",
+    "menu-grinder": [
+        "larry",
+        "moe",
+        "curly"
+    ]
+}

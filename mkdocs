@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ROOT=~/prg/java/edgrind
+
+# Find all project .java files and write their full pathnames to sources.lst
+# (see find ~+ syntax)
+find ${ROOT} -type f -name "*.java" > ${ROOT}/sources.lst &&
+
+javadoc -private -d ${ROOT}/doc @${ROOT}/sources.lst
