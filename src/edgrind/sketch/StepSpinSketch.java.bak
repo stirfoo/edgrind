@@ -1,0 +1,216 @@
+/*
+  StepSpinSketch.java
+  S. Edward Dolan
+  Thursday, September  7 2023
+*/
+
+package edgrind.sketch;
+
+import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
+// 
+import edgrind.Dict;
+//
+import edgrind.geom.*;
+//
+import edgrind.error.OutOfRangeError;
+
+/*
+                 <-------------- l2 -------------->
+                 
+                 <----- l1 ----->                 
+                                 .-----------------.     ^
+                                 |                 |     |
+           ^     .---------------|                 |     |
+           |     |               |                 |     |
+          d1     |               |                 |    d2
+           |     |               |                 |     |
+           v     '---------------|                 |     |
+                                 |                 |     |
+                                 '-----------------'     v
+ */
+
+/**
+   A sketch with multiple diameters and lengths.
+   <p>
+   The left diameter is the smallest. Each diameter increases up to less than
+   the stock diameter. Each length from the origin, left to right, must be
+   increasingly larger as well.
+   </p>
+ */
+@SuppressWarnings("serial")
+public class StepSpinSketch extends Sketch {
+    /**
+       The step data.
+       <p>
+       Each entry is a pair of doubles, the diameter and the length of the
+       diameter, from the origin. This list is populated in updateProfile.
+       StepSpinPanel has limited the number of steps to 5. The last l and d
+       are the stock length and diameter, respectively.
+       <pre>
+       {l1, d1 / 2}, (l2, d2 / 2), ..., (lN, dN / 2)
+       </pre>
+       </p>
+    */
+    Vec2[] steps;
+    /**
+       Construct a sketch.
+    */
+    public StepSpinSketch(SketchScene scene) {
+        /*
+          The default dictionary defines two steps (including the stock
+          diameter and stickout.
+         */
+        super(new Dict("d1", .1,
+                       "d2", .2,
+                       "l1", .1,
+                       "l2", .2),
+              scene);
+    }
+    @Override
+    public void configNew(Dict d) {
+        System.out.println("configNew");
+        super.configNew(d);
+        updateStepData();
+        updateProfile();
+        updateDims();
+    }
+    @Override
+    protected boolean checkGeometry(Dict specs) {
+        Dict d = (Dict)this.specs.clone();
+        d.putAll(specs);
+        System.out.println("================================================");
+        System.out.println("checkGeometry: " + d);
+        double d1 = d.doubleAt("d1");
+        double l1 = d.doubleAt("l1");
+        double d2, l2;
+        for (int i=2; i<6; ++i) {
+            if (d.hasKey("d" + i)) {
+                d2 = d.doubleAt("d" + i);
+                l2 = d.doubleAt("l" + i);
+                System.out.println("checking :" + d2 + " < " + d1);
+                System.out.println("checking :" + l2 + " < " + l1);
+                if (d2 < d1 || l2 < l1)
+                    return false;
+                d1 = d2;
+                l1 = l2;
+            }
+            else
+                break;
+        }
+        /*
+          Successfully updated the geometry. Update the entries that changed in
+          the step data.
+        */
+        System.out.println("steps:" + steps);
+        for (Map.Entry<String, Object> e : specs.entrySet()) {
+            String key = e.getKey();
+            double val = (double)e.getValue();
+            int idx = Integer.parseInt(key.substring(1));
+            System.out.println("key:" + key + " val:" + val +
+                               " idx:" + idx + " char:" + key.charAt(0));
+            switch (key.charAt(0)) {
+                case 'd': steps[idx - 1].y = val / 2; break;
+                case 'l': steps[idx - 1].x = val; break;
+            }
+        }
+        edgrind.Util.printArray(steps);
+        return true;
+    }
+    @Override
+    protected void updateProfile() {
+        System.out.println("updateProfile");
+        if (steps == null)
+            updateStepData();
+        edgrind.Util.printArray(steps);
+        doReset();
+        double x = 0, y = 0;
+        moveTo(x, y);
+        for (int i=0; i<5; ++i) {
+            if (steps[i] == null)
+                break;
+            Vec2 v = steps[i];
+            lineTo(x, v.y);
+            lineTo(v.x, v.y);
+            x = v.x;
+        }
+        mirrorH();
+        for (int i=0; i<5; ++i) {
+            if (steps[i] == null)
+                break;
+            Vec2 v = steps[i];
+            moveTo(v.x, v.y);
+            lineTo(v.x, -v.y);
+        }
+    }
+    @Override
+    protected void updateDims() {
+        System.out.println("updateDims");
+        double x = 0, y = 0, lx, ly;
+        // Rect2 labb = dims.get(0).arrow1.getBBox();
+        Rect2 llbb = dims.get(0).label.getBBox();
+        // Rect2 dabb = dims.get(1).arrow1.getBBox();
+        Rect2 dlbb = dims.get(1).label.getBBox();
+        double ll = scene.getPixelSize(SketchDim.LEADER_LEN);
+        double dlg = scene.getPixelSize(SketchDim.DIM_LABEL_GAP);
+        double maxR = 0;
+        double refy = 0;
+        for (Vec2 v : steps) {
+            if (v == null)
+                break;
+            if (v.y > maxR)
+                maxR = v.y;
+        }
+        for (int i=0, j=0; i<5; ++i, j+=2) {
+            if (steps[i] == null)
+                break;
+            Vec2 v = steps[i];
+            // vertical dim
+            lx = v.x;
+            ly = maxR + llbb.w / 2 + ll;
+            if (i + 1 < 5 && steps[i + 1] != null)
+                refy = steps[i + 1].y;
+            dims.get(j).config(new Dict("name", "l" + (i + 1),
+                                        "value", v.x,
+                                        "pos", new Vec2(lx, ly),
+                                        "ref1", new Vec2(v.x, refy),
+                                        "format", SketchDim.FMT_LIN,
+                                        "vertical", true));
+            // horizontal dim
+            lx = -dlbb.w / 2 - ll;
+            ly = v.y;
+            dims.get(j + 1)
+                .config(new Dict("name", "d" + (i + 1),
+                                 "value", v.y * 2,
+                                 "pos", new Vec2(lx, ly),
+                                 "ref1", new Vec2(x, v.y),         
+                                 "format", SketchDim.FMT_DIA));
+            x = v.x;
+        }
+    }
+    /**
+       Populate the step data with the current specs.
+    */
+    protected void updateStepData() {
+        System.out.println("updateStepData");
+        dims.clear();
+        steps = new Vec2[5];
+        for (Map.Entry<String, Object> e : specs.entrySet()) {
+            String key = e.getKey();
+            if (key.matches("d\\d+")) {
+                int idx = Integer.parseInt(key.substring(1));
+                if (idx < 1 || idx > 5)
+                    throw new OutOfRangeError("spindowns steps must be in" +
+                                              " the range [1 5], got: " +
+                                              idx);
+                String lname = "l" + idx;
+                String dname = "d" + idx;
+                steps[idx - 1] = new Vec2((double)specs.get(lname),
+                                          (double)specs.get(dname) / 2);
+                dims.add(new OrdinateDim(scene, this, lname));
+                dims.add(new OrdinateDim(scene, this, dname));
+            }
+        }
+    }
+}
